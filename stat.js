@@ -11,7 +11,13 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  // for loop
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    console.log(sum,i,numbers[i]);
+    sum = sum + numbers[i];
+  }
+  return sum;
 }
 
 /**
@@ -19,7 +25,10 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  const sum = getSum(numbers);
+  const length = getLength(numbers);
+
+  return sum/length
 }
 
 /**
@@ -27,7 +36,8 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  const minNum = Math.min(...numbers);
+  return minNum;
 }
 
 /**
@@ -35,7 +45,9 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  const maxNum = Math.max(...numbers);
+  return maxNum;
+  // for loop
 }
 
 /**
@@ -43,7 +55,11 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  const minNum = getMin(numbers);
+  const maxNum = getMax(numbers);
+  // const range = maxNum - minNum;
+  return [maxNum-minNum];
+  // for loop
 }
 
 /**
@@ -52,6 +68,23 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  let evenNum = [];
+  for (let i=0; i<numbers.length;i++) {
+    if (numbers[i] % 2 === 0) {
+      evenNum.push(numbers[i]);
+    }
+  }
+  return evenNum;
+  // const evenNumbers = numbers.filter(num => num % 2 === 0);
+  // return evenNumbers;
+  // for loop
+  // const evenNumbers = [];
+  // for (let i = 0; i < numbers.length; i++) {
+  //   if (numbers[i] % 2 === 0) {
+  //     evenNumbers.push(numbers[i]);
+  //   }
+  // }
+  // return evenNumbers;
 }
 
 /**
@@ -60,6 +93,14 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  let oddNum = [];
+  for (let i=0; i<numbers.length;i++) {
+    if (numbers[i] % 2 !== 0) {
+      oddNum.push(numbers[i]);
+    }
+  }
+  // % 2 === 1) or % 2 !== 0;
+  return oddNum;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===

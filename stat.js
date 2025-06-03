@@ -3,6 +3,12 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
+
+  // for loop
+  // let count = 0;  
+  // for (let i = 0; i < numbers.length; i++) {
+  //   count++;
+  // }
   return numbers.length;
 }
 
